@@ -1,0 +1,620 @@
+/* ******* diseño de banner  ******** */
+*{
+    margin: 0;
+    padding: 0;
+  }
+  .section-title {    /*distancia del banner de la parte baja*/
+      margin-bottom: -5px;
+  }
+  
+  .section-title .overlay {
+      padding: 100px 0;   /*tamaño de la mascara */
+    background: rgba(0, 0, 0, 0.7); /*color de la mascara*/
+  }
+  
+  .section-title hr {
+      margin: 0 auto; /* se centra el <hr>*/
+    margin-bottom: 40px; /*margen de bajo del <hr>*/
+  }
+  
+  hr {
+      height: 2px;  /*ancho*/
+      width: 70px; /*largo*/
+      background: #8eb640;
+      border: 0;
+  }
+  
+  #banner {
+      padding: 0 0 10px 0;    /*espacio bajo el barnner*/
+  }
+  
+  #banner .section-title {
+      background: #444 url(img/luna.jpg) center center no-repeat fixed;
+      background-size: cover;   /*especifica el tamaño de la imagen de fondo*/
+      /* "cover" escala la imagen al mayor tamaño posible sin recortarla ni estirarla */
+  }
+
+  /* letras principales del banner  */
+
+h1#title-1 {
+    text-align: center;
+    color: rgba(250, 250, 250, 0.9);
+    font-size: 20px;  
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 10px;  /*espacio entre cada palabra*/
+    line-height: 70px;  /*establece la altura de cada línea que forma el contenido de texto*/
+    font-style: normal;  /*estilo de la fuente normal*/
+    font-weight: 100;   /*grosor de las letras*/
+}
+
+#title-1 em {
+    font-family: 'EB Garamond', serif;
+    font-size: 100px;
+    text-transform: uppercase;
+    letter-spacing: 5px; /*espacio entre cada palabra*/
+    display: block;
+    font-style: normal;  /*estilo de la fuente normal*/
+    padding-top: 15px;
+    text-shadow: 0.07em 0.07em 0 rgba(0, 0, 0, 0.2);  /*sombreado de las letras*/
+    -webkit-perspective: 1000;
+    perspective: 1000;
+    
+}
+
+#title-1 em::before, #title-1 em::after {
+    content: "☣";
+    display: inline-block;
+    opacity: 0.1;
+    margin: 0 16px;
+    font-size: 7vw;  /*40px § ☣ ☽ ☾ ☢ ♰*/
+    display: inline-block; /*bloque en linea permite establecer una anchura y altura en el elemento */
+    -webkit-animation: rotateIn 11s cubic-bezier(0.0, 0.0, 0.58, 1.0) infinite; /*tiempo de transicion de la animacion */
+	animation: rotateIn 11s cubic-bezier(0.0, 0.0, 0.58, 1.0) infinite;/*tiempo de transicion de la animacion */
+
+    
+    
+}
+
+/* animacion de letra A del banner  */
+#title-1 em span {
+    display: inline-block; /*bloque en linea permite establecer una anchura y altura en el elemento */
+    -webkit-animation: lightSpeedInRight 4s cubic-bezier(0.0, 0.0, 0.58, 1.0) infinite; /*tiempo de transicion de la animacion */
+	animation: lightSpeedInRight 4s cubic-bezier(0.0, 0.0, 0.58, 1.0) infinite;/*tiempo de transicion de la animacion */
+	
+	color:#fff;
+}
+
+/* tamaño de las letras cambian al ser resposivo */
+
+ #title-1 em {
+	font-size: 5vw; /*tamaño resposivo para letras */
+	padding-top: 0;
+  }
+  h1#title-1 {     
+    font-size: 25px;
+    margin-top: 5vh;
+  }
+/* +++++++++++++++++++++++++++++++ menu ++++++++++++++++++++ */
+/* ************************* menu ******************************+ */
+.sub-navbar {
+    background: #070707; /* color del navar*/
+    margin-top: 0px;
+    width: 100%; /* se centra el las letras del menu*/
+  
+}
+.navbar-brand{
+    color: #d4c19c;
+    
+	/*font-size: 6vw; tamaño resposivo para letras */
+    font-size: 25px; /* tamaño de letra*/
+    letter-spacing: -1.35px; /* espesor de la letras del titulo  */
+    font-weight: 800; /*grosor de letra*/
+    padding-right: 1px;
+    padding-left: 60px; /*se uso para mover la letra*/
+}
+.navbar-inverse {
+   
+    font-size: 15px !important; /* tamaño de la fuente*/
+    font-weight: bolder;
+}
+.nav-link{
+    color: #d4c19c; /* color de la fuente */
+background-color: transparent;
+text-decoration: none;
+}
+a:hover 
+{
+     color:#fff;  /* color de la fuente al dar click*/
+     text-decoration:none; 
+	 cursor:pointer;  
+	 
+}
+
+/*se utiliza para cambiar el color del boton del navbar */
+ .navbar-toggler-icon { 
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(212, 193, 156)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); 
+} 
+/*se utiliza para cambiar el color del contorno del boton del navbar */
+.navbar-toggler { 
+    border-color: rgb(212, 193, 156); 
+} 
+
+/* ++++++++++++++++++++++++++ banner quien ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+#banner-0 .section-imag .overlay {
+	padding: 15px;  /* tamaño del color */
+	background: rgba(0, 0, 0, 0.7);
+    height: 340px;
+    
+}
+.uno{
+    background: rgba(0, 0, 0, 0.50);
+   
+    
+}
+
+#banner-0 .section-imag .overlay p{
+    /* font-size: 18px; */
+    background: rgba(0, 0, 0, 0.50);
+    border: solid 5px black;
+    width: 900px;
+    height: 150px;
+    padding: 1px;
+    margin: auto;
+    /* text-align: center; */
+    color: rgba(250, 250, 250, 0.9);
+    font-size: 15px;  
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 6px;  /*espacio entre cada palabra*/
+    line-height: 20px;  /*establece la altura de cada línea que forma el contenido de texto*/
+    font-style: normal;  /*estilo de la fuente normal*/
+    font-weight: 100;   /*grosor de las letras*/
+  
+}
+
+@media screen and (max-width:908px){
+    #banner-0 .section-imag .overlay p{
+       width: 98%;
+       height: 50%;
+    }
+
+    #banner-0 .section-imag .overlay .fogata{
+        display:none; /*se desaparece la imagen*/
+    }
+
+}
+
+#banner-0 .section-imag .overlay .fogata{
+    float: right;
+    width: 30%;
+    height: 100%;
+}
+
+#banner-0 {
+	padding: 5px 0 0 0;    /*espacio bajo el barnner*/
+    
+}
+
+#banner-0 .section-imag {
+	background: #444 url(img/luna.jpg) center center no-repeat fixed;
+    background-size: cover;
+    padding: 0; /* tamaño del contenedor  */
+	
+}
+
+  /* ************************* banner solo ***************************************************** */
+#banner-1 .section-imag .overlay {
+	padding: 0;  /* tamaño del color */
+	background: rgba(0, 0, 0, 0.7);
+    
+}
+
+#banner-1 {
+	padding: 0 0 1px 0;    /*espacio bajo el barnner*/
+    margin-top: -35px;
+}
+
+#banner-1 .section-imag {
+	background: #444 url(img/luna.jpg) center center no-repeat fixed;
+    background-size: cover;
+    padding: 0; /* tamaño del contenedor  */
+	
+}
+
+
+
+  /* *********************  banner gato  *************************************************************** */
+
+  #banner-gato .section-gato .overlay{
+
+    padding: 103px 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+
+#banner-gato .section-gato {
+	background: #444 url(img/luna.jpg) center center no-repeat fixed;
+    background-size: cover;
+  }
+
+
+   /* ++++++++++++++++++++++  ojos +++++++++++++++++++++++++ */
+
+.container-2{
+    background: rgba(0, 0, 0, 0.7);
+    /* background: rgb(63, 62, 62); */
+    height: 300px;  /*largo del contenedor*/
+    margin-bottom: -15px;
+    
+}
+
+.box{
+    display: flex;  
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; /*centra el contenido de la caja*/
+    
+ 
+}
+
+/* ojos */
+.eye{
+    position: relative;
+    display: inline-block;
+    margin: 13px; /* distacia entre los ojos */
+    overflow: hidden;
+    top:15px; 
+    left: -1px;
+    background-color: yellow; /*color de ojos*/
+    
+}
+
+.eye-inside{
+    width: 20px;/*tamaño de las pupilar */
+    height: 20px;
+    position: absolute;
+    background-color: black; /*color de pupilas*/
+    border-radius: 50%; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.eye-flipped{
+    transform: scaleX(-1);
+    
+}
+ 
+/* imagen del gatito */
+.gato{
+  overflow:hidden;
+  position: absolute; 
+  height:240px;
+  width:90%;
+  z-index: 3; /*para que la imagen del gato este ensima de los ojos */
+  overflow: hidden;
+  display: block;
+  padding:30px;
+  top: 915px;  /*--------------------------------------------------------------------------------*/
+}
+ /* +++++++++++++++++ ventana modal ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+ 
+.container-all{
+    position: fixed;
+    bottom: 0;
+    z-index: 1200; /*para que el modal sea el unico */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 50px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 600ms;
+}
+
+.container-all:target{
+    background: rgba(0, 0, 0, 0.8);
+    visibility: visible;
+    opacity: 1;
+}
+
+.container-all:target .popup{
+    top: 50%;
+    left: 50%;
+    transform:  rotate(0deg) translate(-50%, -50%);
+    visibility: visible;
+}
+
+.popup{
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    background: white;
+    visibility: hidden;
+    top: -80%;
+    left: -80%;
+    transform: rotate(90deg) translate(-150%, 230%);
+    transition: all 600ms;
+}
+
+.imgpu{
+    width: 40%;
+    background-image: url(./img/exa.png);
+    background-size: cover;/*para que se adapte la imagen*/
+    background-position: center;
+}
+
+.container-text{
+    width: 60%;
+    padding: 50px;
+    overflow-y: auto;/*para que aparesca la barra del escrol*/
+}
+
+.container-text .letra1{
+    font-size: 40px;
+}
+/* AplicaciónwebconsumoenergeticoCFE.000webhostapp.com */
+.container-text .letra2{
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.btn-close-popup{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: -35px;
+    top: -35px;
+    padding: 30px;
+    background: black;
+    color: white;
+    border-radius: 50%;
+    line-height: 40px;
+
+}
+
+@media screen and (max-width:900px){
+
+    .container-all{
+       
+        width: 85%;
+        height: 90%;
+        
+    }
+    .popup{
+        flex-direction: column;
+        height: 100%;
+        max-height: 800px;
+    }
+
+    .imgpu{
+        width: 85%;
+        height: 40%;
+        
+    }
+    .container-text{
+        margin-left: 12px;
+        width: 85%;
+        height: 52%;
+        padding: 18px;
+       
+    }
+    .container-text h1{
+        font-size: 20px;
+    }
+    .container-text p{
+        font-size: 12px;
+    }
+}
+
+ 
+
+
+  /* targetas  */
+
+  .container{
+      background: #111;
+      /* background: rgb(43, 42, 42); */
+     
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 0;
+      flex-wrap: wrap;
+  }
+
+  .container .box{
+      position: relative;
+      width: 320px;  /*tamaño de los cajas*/
+      height: 400px;
+      color: #fff;
+      background: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 30px;
+      transition: 0.5s;
+  }
+
+  .container .box:hover{
+      transform: translateY(-20px);
+  }
+
+  .container .box::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, #ffbc00, #ff0058);
+  }
+
+  
+
+ 
+
+  .container .box::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ffbc00, #ff0058);
+    filter: blur(30px);
+}
+
+.container .box:nth-child(2)::before,
+.container .box:nth-child(2)::after{
+    background: linear-gradient(315deg, #03a9f4, #ff0058);
+}
+
+.container .box:nth-child(3)::before,
+.container .box:nth-child(3)::after{
+    background: linear-gradient(315deg, #4dff03, #00d0ff);
+}
+
+.container .box span{
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    background: rgba(0,0,0,0.6);
+    z-index: 2;
+}
+
+.container .box .span3::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  /* background: rgba(255,255,255,0.1);  */
+  background: #444 url(img/luz.png) center center  fixed ;
+  background-position: 50% 50%;
+  pointer-events: none;
+} 
+
+.container .box .span2::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgb(10, 10, 10) url(img/veterinaria1.png) center center no-repeat fixed;
+    /* background-image: url(./img/veterinaria1.png); */
+    background-position: 50% 50%;
+    /* background: rgba(255,255,255,0.1); */
+    pointer-events: none;
+  }
+
+  .container .box .span1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #444 url(img/exa.png) center center  fixed;
+    /* background-image: url(./img/veterinaria1.png); */
+    background-position: 50% 50%;
+    /* background: rgba(255,255,255,0.1); */
+    pointer-events: none;
+  }
+
+.container .box .content{
+    position: relative;
+    z-index: 10;
+    padding: 20px 40px;
+}
+
+.conatiner .box .content h2{
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 10px;
+    text-align: center;
+  
+}
+
+.content p {
+    background: rgba(30, 30, 31, 0.849);
+    text-align: justify;
+    padding: 10px;
+}
+.content h2{
+    /* background: rgba(90, 3, 231, 0.849); */
+    background: rgba(30, 30, 31, 0.849);
+    text-align: center;
+
+}
+
+
+.conatiner .box .content p{
+    font-size: 1.1em;
+    /* color: #fff; */
+    color: #d4c19c;
+    margin-bottom: 10px;
+    line-height: 1.4em;
+    
+}
+
+.container .box .content a{
+    
+    display: inline-block;
+    font-size: 1.1em;
+    color: #fff;
+    /* background: rgba(0, 0, 0, 0.3); */
+    background: rgba(90, 3, 231, 0.849);
+    padding: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    position: absolute;
+    left: 35%;
+    top: 100%;
+  
+  
+  
+}
+
+/* ////////////////////////// boton /////////////////////////////////// */
+.boton_caja:before{  
+    
+    content:"";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(45deg, #ffbc00, #ff0058);
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    transition: all .3s;
+    left: 0;
+
+}
+
+.boton_caja:hover::before{
+    width: 100%;
+}
+
+.container .span1:hover,
+.container .span2:hover,
+.container .span3:hover{
+    display: inline-block;
+    -webkit-animation: swing 1s cubic-bezier(0.0, 0.0, 0.58, 1.0) infinite;
+	animation: swing 1s cubic-bezier(0.0, 0.0, 0.58, 1.0) infinite;
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
