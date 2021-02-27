@@ -3,6 +3,12 @@
     margin: 0;
     padding: 0;
   }
+  html{
+      scroll-behavior: smooth; /*efecto de scroll*/
+  }
+  body{
+      background: #4dff03;
+  }
   .section-title {    /*distancia del banner de la parte baja*/
       margin-bottom: -5px;
   }
@@ -20,7 +26,7 @@
   hr {
       height: 2px;  /*ancho*/
       width: 70px; /*largo*/
-      background: #8eb640;
+      background: #4dff03;
       border: 0;
   }
   
@@ -96,32 +102,35 @@ h1#title-1 {
   }
 /* +++++++++++++++++++++++++++++++ menu ++++++++++++++++++++ */
 /* ************************* menu ******************************+ */
-.sub-navbar {
+.navigation {
     background: #070707; /* color del navar*/
-    margin-top: 0px;
+    /* margin-top: 0px; */
     width: 100%; /* se centra el las letras del menu*/
+    text-align:right;
+    /* position: fixed; */
   
 }
-.navbar-brand{
-    color: #d4c19c;
-    
-	/*font-size: 6vw; tamaño resposivo para letras */
-    font-size: 25px; /* tamaño de letra*/
-    letter-spacing: -1.35px; /* espesor de la letras del titulo  */
-    font-weight: 800; /*grosor de letra*/
-    padding-right: 1px;
-    padding-left: 60px; /*se uso para mover la letra*/
+.navigation ul li{
+    display: inline-block;    
 }
-.navbar-inverse {
+.navigation ul li a{
+    display: block;
+    padding: 18px;
+}
+.navigation ul{
    
-    font-size: 15px !important; /* tamaño de la fuente*/
-    font-weight: bolder;
+    list-style: none;
 }
-.nav-link{
-    color: #d4c19c; /* color de la fuente */
-background-color: transparent;
-text-decoration: none;
+.navigation a{
+    color: #d4c19c;
+	/*font-size: 6vw; tamaño resposivo para letras */
+    font-size: 20px; /* tamaño de letra*/
+   
+    font-weight: 800; /*grosor de letra*/
+   
+    text-decoration: none;/*para que no aparesca las lineas de los enlaces*/
 }
+
 a:hover 
 {
      color:#fff;  /* color de la fuente al dar click*/
@@ -130,25 +139,11 @@ a:hover
 	 
 }
 
-/*se utiliza para cambiar el color del boton del navbar */
- .navbar-toggler-icon { 
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(212, 193, 156)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); 
-} 
-/*se utiliza para cambiar el color del contorno del boton del navbar */
-.navbar-toggler { 
-    border-color: rgb(212, 193, 156); 
-} 
-
 /* ++++++++++++++++++++++++++ banner quien ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 #banner-0 .section-imag .overlay {
 	padding: 15px;  /* tamaño del color */
 	background: rgba(0, 0, 0, 0.7);
     height: 340px;
-    
-}
-.uno{
-    background: rgba(0, 0, 0, 0.50);
-   
     
 }
 
@@ -190,7 +185,7 @@ a:hover
 }
 
 #banner-0 {
-	padding: 5px 0 0 0;    /*espacio bajo el barnner*/
+	padding: 5px 0 3px 0;    /*espacio bajo el barnner*/
     
 }
 
@@ -209,8 +204,8 @@ a:hover
 }
 
 #banner-1 {
-	padding: 0 0 1px 0;    /*espacio bajo el barnner*/
-    margin-top: -35px;
+	padding: 0 0 0px 0;    /*espacio bajo el barnner*/
+    margin-top: -37px;
 }
 
 #banner-1 .section-imag {
@@ -223,6 +218,7 @@ a:hover
 
 
   /* *********************  banner gato  *************************************************************** */
+  
 
   #banner-gato .section-gato .overlay{
 
@@ -244,7 +240,7 @@ a:hover
     background: rgba(0, 0, 0, 0.7);
     /* background: rgb(63, 62, 62); */
     height: 300px;  /*largo del contenedor*/
-    margin-bottom: -15px;
+    margin-bottom: -13px; /*espacio bajo el baner*/
     
 }
 
@@ -296,12 +292,13 @@ a:hover
   overflow: hidden;
   display: block;
   padding:30px;
-  top: 915px;  /*--------------------------------------------------------------------------------*/
+  top: 932px;  /*--------------------------------------------------------------------------------*/
 }
  /* +++++++++++++++++ ventana modal ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
  
 .container-all{
+   
     position: fixed;
     bottom: 0;
     z-index: 1200; /*para que el modal sea el unico */
@@ -358,7 +355,7 @@ a:hover
 .container-text .letra1{
     font-size: 40px;
 }
-/* AplicaciónwebconsumoenergeticoCFE.000webhostapp.com */
+
 .container-text .letra2{
     margin-top: 20px;
     font-size: 16px;
@@ -376,6 +373,7 @@ a:hover
     color: white;
     border-radius: 50%;
     line-height: 40px;
+    text-decoration: none;
 
 }
 
@@ -428,6 +426,8 @@ a:hover
       align-items: center;
       padding: 40px 0;
       flex-wrap: wrap;
+      margin-bottom: 6px;
+      margin-top: -9px;
   }
 
   .container .box{
@@ -618,3 +618,67 @@ a:hover
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
+#banner-footer .section-imag .overlay {
+	padding: 15px;  /* tamaño del color */
+	background: rgba(0, 0, 0, 0.7);
+    height: 340px;
+    
+}
+
+
+#banner-footer .section-imag .overlay p{
+    /* font-size: 18px; */
+    background: rgba(0, 0, 0, 0.50);
+    border: solid 5px black;
+    width: 600px;
+    height: 150px;
+    padding: 1px;
+    margin: auto;
+    /* text-align: center; */
+    color: rgba(250, 250, 250, 0.9);
+    font-size: 15px;  
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 6px;  /*espacio entre cada palabra*/
+    line-height: 50px;  /*establece la altura de cada línea que forma el contenido de texto*/
+    font-style: normal;  /*estilo de la fuente normal*/
+    font-weight: 100;   /*grosor de las letras*/
+
+}
+
+
+#banner-footer .section-imag {
+	background: #444 url(img/luna.jpg) center center no-repeat fixed;
+    background-size: cover;
+    padding: 0; /* tamaño del contenedor  */
+	
+}
+
+@media screen and (max-width:908px){
+    #banner-footer .section-imag .overlay p{
+       width: 98%;
+       height: 50%;
+    }
+
+}
+
+#banner-footer .section-imag .overlay a{
+   color: #d4c19c;
+	/*font-size: 6vw; tamaño resposivo para letras */
+    font-size: 30px; /* tamaño de letra*/
+   
+    font-weight: 800; /*grosor de letra*/
+   
+    text-decoration: none;/*para que no aparesca las lineas de los enlaces*/ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#banner-footer .section-imag .overlay a:hover 
+{
+     color:#fff;  /* color de la fuente al dar click*/
+     text-decoration:none; 
+	 cursor:pointer;  
+	 
+}
