@@ -2,13 +2,32 @@
 *{
     margin: 0;
     padding: 0;
+
   }
   html{
       scroll-behavior: smooth; /*efecto de scroll*/
   }
+
+  /* ****************************** estilo del body y animacion colores ******************************** */
   body{
-      background: #4dff03;
+      
+      animation: BgcolorChanging-6color 10s linear infinite alternate both;
   }
+
+  @keyframes BgcolorChanging-6color{
+      0%{
+        background: #4dff03;
+      }
+      20%{
+        background: #0804f7;
+      }
+      40%{
+        background: #ea2222;
+      }
+  }
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
   .section-title {    /*distancia del banner de la parte baja*/
       margin-bottom: -5px;
   }
@@ -22,7 +41,7 @@
       margin: 0 auto; /* se centra el <hr>*/
     margin-bottom: 40px; /*margen de bajo del <hr>*/
   }
-  
+
   hr {
       height: 2px;  /*ancho*/
       width: 70px; /*largo*/
@@ -202,16 +221,18 @@ a:hover
 	
 }
 
-  /* ************************* banner solo ***************************************************** */
+  /* ************************* banner letras proyecto ***************************************************** */
 #banner-1 .section-imag .overlay {
 	padding: 0;  /* tamaño del color */
-	background: rgba(0, 0, 0, 0.7);
+	background: rgba(0, 0, 0, 0.7); 
+
+    
     
 }
 
 #banner-1 {
 	padding: 0 0 0px 0;    /*espacio bajo el barnner*/
-    margin-top: -37px;
+    margin-top: -35px; /*////*/
 }
 
 #banner-1 .section-imag {
@@ -228,7 +249,7 @@ a:hover
 
   #banner-gato .section-gato .overlay{
 
-    padding: 103px 0;
+    padding: 110px 0;
     background: rgba(0, 0, 0, 0.5);
 }
 
@@ -250,7 +271,7 @@ a:hover
     
 }
 
-.box{
+.box-1{
     display: flex;  
     flex-direction: row;
     flex-wrap: wrap;
@@ -263,7 +284,7 @@ a:hover
 .eye{
     position: relative;
     display: inline-block;
-    margin: 13px; /* distacia entre los ojos */
+    margin: 11px; /* distacia entre los ojos */
     overflow: hidden;
     top:15px; 
     left: -1px;
@@ -288,18 +309,27 @@ a:hover
     
 }
  
-/* imagen del gatito */
+/* +++++++++++++++++++++ imagen del gatito ++++++++++++++++++++++++++++++++++*/
 .gato{
+  top: 975px;
+ width: 220px ;
+  height:220px;
+  z-index: 3; /*para que la imagen del gato este ensima de los ojos */
   overflow:hidden;
   position: absolute; 
-  height:240px;
-  width:90%;
-  z-index: 3; /*para que la imagen del gato este ensima de los ojos */
-  overflow: hidden;
-  display: block;
-  padding:30px;
-  top: 925px;  /*--------------------------------------------------------------------------------*/
+  display: flex;  
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; /*centra el contenido de la caja*/
 }
+
+@media screen and (max-width:1366px){
+    .gato{
+        top: 960px;
+    }
+}
+
+
  /* +++++++++++++++++ ventana modal ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
  
@@ -430,7 +460,7 @@ a:hover
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 40px 0;
+      padding: 45px 0;
       flex-wrap: wrap;
       margin-bottom: 6px;
       margin-top: -9px;
