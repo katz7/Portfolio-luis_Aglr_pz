@@ -132,7 +132,7 @@ h1#title-1 {
     width: 100%; /* se centra el las letras del menu*/
     text-align:right;
     /* position: fixed; */
-    position: sticky;
+    position: sticky;  /*para que el menu sea pegajoso*/
     top:0;
     z-index: 1200; /*para que el modal sea el unico */
     
@@ -152,7 +152,7 @@ h1#title-1 {
 .navigation a{
     color: #d4c19c;
 	/*font-size: 6vw; tamaño resposivo para letras */
-    font-size: 20px; /* tamaño de letra*/
+    font-size: 110%; /* tamaño de letra*/
    
     font-weight: 800; /*grosor de letra*/
    
