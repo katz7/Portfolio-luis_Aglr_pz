@@ -173,6 +173,16 @@ a:hover
         padding: 10px;
     }
 
+    .navigation a{
+        color: #d4c19c;
+        /*font-size: 6vw; tamaño resposivo para letras */
+        font-size: 72%; /* tamaño de letra*/
+       
+        font-weight: 800; /*grosor de letra*/
+       
+        text-decoration: none;/*para que no aparesca las lineas de los enlaces*/
+    }
+
     
 }
 
@@ -219,7 +229,7 @@ a:hover
 @media screen and (max-width:370px){
     #banner-0 .section-imag .overlay p{
         width: 94%;
-       height: 60%;
+       height: 66%;
        font-size: 65%;
     }
 
