@@ -132,6 +132,9 @@ h1#title-1 {
     width: 100%; /* se centra el las letras del menu*/
     text-align:right;
     /* position: fixed; */
+    position: sticky;
+    top:0;
+    z-index: 1200; /*para que el modal sea el unico */
     
   
 }
