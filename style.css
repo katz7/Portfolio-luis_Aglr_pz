@@ -152,7 +152,7 @@ h1#title-1 {
 .navigation a{
     color: #d4c19c;
 	/*font-size: 6vw; tamaño resposivo para letras */
-    font-size: 110%; /* tamaño de letra*/
+    font-size: 100%; /* tamaño de letra*/
    
     font-weight: 800; /*grosor de letra*/
    
@@ -165,6 +165,15 @@ a:hover
      text-decoration:none; 
 	 cursor:pointer;  
 	 
+}
+
+@media screen and (max-width:370px){
+    .navigation ul li a{
+        display: block;
+        padding: 10px;
+    }
+
+    
 }
 
 /* ++++++++++++++++++++++++++ banner quien ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -198,6 +207,7 @@ a:hover
     #banner-0 .section-imag .overlay p{
         width: 94%;
        height: 50%;
+       font-size: 40%;
     }
 
     #banner-0 .section-imag .overlay .fogata{
@@ -205,6 +215,21 @@ a:hover
     }
 
 }
+
+@media screen and (max-width:370px){
+    #banner-0 .section-imag .overlay p{
+        width: 94%;
+       height: 60%;
+       font-size: 65%;
+    }
+
+    #banner-0 .section-imag .overlay .fogata{
+        display:none; /*se desaparece la imagen*/
+    }
+
+}
+
+
 
 #banner-0 .section-imag .overlay .fogata{
     float: right;
@@ -329,6 +354,12 @@ a:hover
 @media screen and (max-width:1366px){
     .gato{
         top: 960px;
+    }
+}
+
+@media screen and (max-width:370px){
+    .gato{
+        top: 1060px;
     }
 }
 
