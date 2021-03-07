@@ -367,6 +367,13 @@ a:hover
     }
 }
 
+@media screen and (max-width:430px){
+    .gato{
+        top: 1010px;
+    }
+}
+
+
 @media screen and (max-width:370px){
     .gato{
         top: 1060px;
