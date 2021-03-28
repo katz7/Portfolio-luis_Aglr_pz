@@ -14,6 +14,7 @@
       animation: BgcolorChanging-6color 10s linear infinite alternate both;
   }
 
+
   @keyframes BgcolorChanging-6color{
       0%{
         background: #4dff03;
@@ -27,6 +28,8 @@
   }
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* ///////////////////////////////////////////////////////// */
 
   .section-title {    /*distancia del banner de la parte baja*/
       margin-bottom: -5px;
@@ -43,20 +46,48 @@
   }
 
   hr {
-      height: 2px;  /*ancho*/
-      width: 70px; /*largo*/
-      background: #4dff03;
+      height: 5px;  /*ancho*/
+      width: 100px; /*largo*/
+      /* background: #4dff03; */
       border: 0;
+      animation: Barra-6color 10s linear infinite alternate both;
   }
+
+ 
+/* ///////////////// efecto de color de barra  */
+@keyframes Barra-6color{
+    0%{
+      background: #4dff03;
+    }
+    20%{
+      background: #0804f7;
+    }
+    40%{
+      background: #ea2222;
+    }
+}
+
+/* ////////////// particulas ////////////////////// */
+ #particles-js{
+    height: 400px;
+    width: 100%; 
+     /* position: fixed; */
+     position: absolute;
+    z-index: 99;
+    /* para que quede dentro del banner va position: relative; dentro de la caja padre que #banner .section-title */
+  
+}
+/* ///////////////////////////////////// */
   
   #banner {
       padding: 0 0 8px 0;    /*espacio bajo el barnner*/
   }
   
   #banner .section-title {
-      background: #444 url(img/luna.jpg) center center no-repeat fixed;
+      background: #444 url(img/binario.jpg) center center no-repeat fixed;
       background-size: cover;   /*especifica el tamaño de la imagen de fondo*/
       /* "cover" escala la imagen al mayor tamaño posible sin recortarla ni estirarla */
+      position: relative;
   }
 
   /* letras principales del banner  */
@@ -125,126 +156,145 @@ h1#title-1 {
     margin-top: 5vh;
   }
 /* +++++++++++++++++++++++++++++++ menu ++++++++++++++++++++ */
-/* ************************* menu ******************************+ */
-.navigation {
-    background: #070707; /* color del navar*/
-    /* margin-top: 0px; */
-    width: 100%; /* se centra el las letras del menu*/
-    text-align:right;
-    /* position: fixed; */
+.menu{
+    background: black;
+    height: 75px;
+    width: 99vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border-bottom: 1px solid #fff; */
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.6);
+    margin-bottom: 1px; 
     position: sticky;  /*para que el menu sea pegajoso*/
     top:0;
-    z-index: 1200; /*para que el modal sea el unico */
-    
+      z-index: 1200; /*para que el modal sea el unico */
+  }
   
-}
-.navigation ul li{
-    display: inline-block;    
-}
-.navigation ul li a{
-    display: block;
-    padding: 18px;
-}
-.navigation ul{
-   
+  .logo{
+    color: #fff;
+    font-size: 35px;
+    padding: 0 70px;
+    /* font-weight: bold; */
+  }
+  
+  .menu-items{
+    display: flex;
     list-style: none;
-}
-.navigation a{
-    color: #d4c19c;
-	/*font-size: 6vw; tamaño resposivo para letras */
-    font-size: 100%; /* tamaño de letra*/
-   
-    font-weight: 800; /*grosor de letra*/
-   
-    text-decoration: none;/*para que no aparesca las lineas de los enlaces*/
-}
-
-a:hover 
-{
-     color:#fff;  /* color de la fuente al dar click*/
-     text-decoration:none; 
-	 cursor:pointer;  
-	 
-}
-
-@media screen and (max-width:370px){
-    .navigation ul li a{
-        display: block;
-        padding: 10px;
+    margin-right: 30px;
+  }
+  
+  .menu-items li{
+    border-radius: 3px;
+    margin: 0 5px;
+  }
+  
+  .menu-items li a{
+    padding: 7px 13px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    text-transform: uppercase;
+    color: #fff;
+    transition: .4s;
+  
+  }
+  
+  .menu-items li:hover, li.active{
+    background: rgba(145, 2, 240, 0.829);
+    animation: Barra-6color 10s linear infinite alternate both; /*multicolor en efecto hover*/
+    transition: .4s;
+  
+  }
+  
+  .btn-menu{
+    margin-right: 30px;
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+  
+  }
+  
+  ul.show{
+    top: 65px;
+  
+  }
+  
+  @media screen and (max-width:952px){
+      .logo{
+        font-size: 30px;
+        padding-left: 35px;
+      }
+      .menu-items li a{
+        font-size: 16px;
+      }
+  }
+  
+  @media screen and (max-width:858px){
+    .menu{
+      height: 65px;
     }
-
-    .navigation a{
-        color: #d4c19c;
-        /*font-size: 6vw; tamaño resposivo para letras */
-        font-size: 72%; /* tamaño de letra*/
-       
-        font-weight: 800; /*grosor de letra*/
-       
-        text-decoration: none;/*para que no aparesca las lineas de los enlaces*/
+  
+    .btn-menu{
+      display: inline-flex;
     }
+  
+    .menu-items{
+      position: fixed;
+      width: 100vw;
+      height: calc(100% - 65px);
+      background: #161616;
+      top: -100vh;
+      text-align: center;
+      transition: all .4s;
+      flex-direction: column;
+    }
+  
+    .menu-items li{
+      margin: 30px 0 0 0;
+      line-height: 30px;
+    }
+  
+    .menu-items li:hover{
+      background: none;
+    }
+    .menu-items li a{
+      font-size: 20px;
+      color: #fff;
+      font-weight: bold;
+    }
+    .menu-items li a:hover{
+      /* color: #e9183b; */
+      color: #fff;
+    }
+    .logo{
+      font-size: 25px;
+      padding-left: 35px;
+    }
+  
+  }
+  /* /// para que se adapte el menu en pantalla orizontal */
+   @media screen and (max-width:858px) and (orientation: landscape){
+     .menu-items li{
+        margin: 5px 0 0 0 ;
+     }
+     .menu-items{
+       overflow: scroll;
+       height: cal(100% - 65px);
+     }
+   }
+  
+  
+ 
 
-    
-}
 
 /* ++++++++++++++++++++++++++ banner quien ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 #banner-0 .section-imag .overlay {
-	padding: 15px;  /* tamaño del color */
+	padding: 12px;  /* tamaño del color */
 	background: rgba(0, 0, 0, 0.7);
-    height: 340px;
+    height: 390px;
     
-}
-
-#banner-0 .section-imag .overlay p{
-    /* font-size: 18px; */
-    background: rgba(0, 0, 0, 0.50);
-    border: solid 5px #d4c19c;
-    width: 60%;
-    height: 150px;
-    padding: 10px;
-    margin: auto;
-    /* text-align: center; */
-    color: rgba(250, 250, 250, 0.9);
-    font-size: 15px;  
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 6px;  /*espacio entre cada palabra*/
-    line-height: 20px;  /*establece la altura de cada línea que forma el contenido de texto*/
-    font-style: normal;  /*estilo de la fuente normal*/
-    font-weight: 100;   /*grosor de las letras*/
-  
-}
-
-@media screen and (max-width:908px){
-    #banner-0 .section-imag .overlay p{
-        width: 94%;
-       height: 50%;
-       font-size: 40%;
-    }
-
-    #banner-0 .section-imag .overlay .fogata{
-        display:none; /*se desaparece la imagen*/
-    }
-
-}
-
-@media screen and (max-width:370px){
-    #banner-0 .section-imag .overlay p{
-        width: 94%;
-       height: 66%;
-       font-size: 65%;
-    }
-
-    #banner-0 .section-imag .overlay .fogata{
-        display:none; /*se desaparece la imagen*/
-    }
-
-}
-
-
-
-#banner-0 .section-imag .overlay .fogata{
-    float: right;
-    width: 30%;
-    height: 100%;
 }
 
 #banner-0 {
@@ -258,6 +308,59 @@ a:hover
     padding: 0; /* tamaño del contenedor  */
 	
 }
+
+.caja-Quien-soy{
+    border: solid 5px #d4c19c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    /* overflow: auto; */
+    margin: auto;
+   
+}
+
+.caja-Quien1{
+    color: #fff;
+}
+.caja-Quien2 img{
+    width: 200px;
+    height: 180px;
+}
+
+.caja-Quien1 p{
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.50);
+    font-size: 15px;  
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 6px;  /*espacio entre cada palabra*/
+    line-height: 20px;  /*establece la altura de cada línea que forma el contenido de texto*/
+    font-style: normal;  /*estilo de la fuente normal*/
+    font-weight: 100;   /*grosor de las letras*/
+}
+
+
+@media screen and (max-width:768px){
+    .caja-Quien-soy{
+        flex-wrap: wrap;
+    }
+    .caja-Quien2 img{
+        display: none;
+    }
+}
+
+@media screen and (max-width:362px){
+    .caja-Quien1 p{
+        font-size: 13px;  
+    }
+    .caja-Quien-soy{
+       
+        width: 90%;
+       
+       
+    }
+}
+
 
   /* ************************* banner letras proyecto ***************************************************** */
 #banner-1 .section-imag .overlay {
@@ -349,7 +452,7 @@ a:hover
  
 /* +++++++++++++++++++++ imagen del gatito ++++++++++++++++++++++++++++++++++*/
 .gato{
-  top: 975px;
+  top: 1035px;
  width: 220px ;
   height:220px;
   z-index: 3; /*para que la imagen del gato este ensima de los ojos */
@@ -361,37 +464,40 @@ a:hover
   justify-content: center; /*centra el contenido de la caja*/
 }
 
+@media screen and (max-width:1440px){
+    .gato{
+        top: 1035px;
+    }
+}
+
 @media screen and (max-width:1366px){
     .gato{
-        top: 960px;
+        top: 1025px;
     }
 }
 
-@media screen and (max-width:498px){
+
+@media screen and (max-width:485px){
     .gato{
-        top: 1020px;
+        top: 1010px;
     }
 }
 
-@media screen and (max-width:430px){
+@media screen and (max-width:380px){
     .gato{
-        top: 800px;
+        top: 1150px;
     }
 }
 
 
-@media screen and (max-width:370px){
+@media screen and (max-width:360px){
     .gato{
-        top: 1060px;
+        top: 1150px;
     }
 }
 
+/* 1366 x 768 */
 
-@media screen and (max-width:740px)(max-height:395px){
-    .gato{
-        top: 960px;
-    }
-}
 
 
 
@@ -749,7 +855,7 @@ a:hover
 
 
 #banner-footer .section-imag {
-	background: #444 url(img/luna.jpg) center center no-repeat fixed;
+	background: #444 url(img/retro.gif) center center no-repeat fixed;
     background-size: cover;
     padding: 0; /* tamaño del contenedor  */
 	
@@ -763,25 +869,16 @@ a:hover
 
 }
 
-#banner-footer .section-imag .overlay a{
-   color: #fff;
-	/*font-size: 6vw; tamaño resposivo para letras */
-    font-size: 30px; /* tamaño de letra*/
-   
-    font-weight: 800; /*grosor de letra*/
-   
-    text-decoration: none;/*para que no aparesca las lineas de los enlaces*/ 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-
-}
-
-#banner-footer .section-imag .overlay a:hover 
-{
-     color:#d4c19c;  /* color de la fuente al dar click*/
-     text-decoration:none; 
-	 cursor:pointer;  
-	 
+@media screen and (max-width:362px){
+    
+        #banner-footer .section-imag .overlay p{
+            /* font-size: 18px; */
+            width: 80%;
+            height: 190px;
+            padding: 10px;
+            margin: auto;
+            letter-spacing: 5px;  /*espacio entre cada palabra*/
+            
+    }
+    
 }
