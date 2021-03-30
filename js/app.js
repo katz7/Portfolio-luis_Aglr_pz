@@ -1,3 +1,5 @@
+ //AOS.init();// inicialización básica
+
 
 addEventListener("DOMContentLoaded", () =>{
 
