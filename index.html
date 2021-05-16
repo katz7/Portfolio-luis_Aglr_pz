@@ -147,6 +147,15 @@
                     <a href="https://calcular-consumo-energetico-cfc.000webhostapp.com/" class="boton_caja">Enlace</a>
                 </div>
             </div>
+
+            <div class="box">
+                <span data-aos="flip-down" class="span4"></span>
+                <div class="content">
+                    <h2>Construcción de casas </h2>
+                    <p>Se desarrollo una página para una pequeña microempresa que se dedica a la construcción, mantenimiento, renovaciones y acabados en general, un faltan de talles del cliente.</p>
+                    <a href="https://calcular-consumo-energetico-cfc.000webhostapp.com/" class="boton_caja">Enlace</a>
+                </div>
+            </div>
             
         </div>
 
@@ -197,18 +206,42 @@
             </div>
         </div>
 
+        <!-- contenedor avilidades  -->
+
+        <div class="container-habilidades">
+            <div data-aos="zoom-in-left" class="caja-habilidades">
+                <h1>Habilidades</h1>
+                <br>
+                <img src="img/iconos.png" alt="" width="260px" height="100px">
+                <img src="img/java.png" alt="" width="110px" height="120px">
+                <img src="img/git.png" width="100px" height="100px" alt="">
+                <img src="img/bos.png" alt="" width="100px" height="100px">
+            </div>
+        </div>
+
         <!-- ++++++++++++++++++++++++++++ banner de footer ++++++++++++++ -->
 
         <div id="banner-footer" >
             <div class="section-imag">
                 <div  class="overlay">
                     <h1 id="title-1">Contacto </h1>
-                    <p data-aos="zoom-in-left">Correo: Luis_Aglr_Pz@hotmail.com <br>
-                        Tel: 5575729414 <br>
-                        Cel: 5535648696
-                    </p>
+                  
+                        <div class="caja-formulario">
+                           <form action="enviar.php" method="POST">
+                           <input type="text" name="nombre" placeholder="Nombre" required>
+                           <input type="email" name="correo" placeholder="Correo" required>
+                           <br>
+                           <textarea name="mensaje" id="" cols="30" rows="10" placeholder=" Mensaje" required></textarea>
+                           <br>
 
-                    <!-- <a href="#">Ir al inicio</a> -->
+                           <div class="btn-centrar">
+                               
+                           <button class="boton-enviar" type="submit" name="Enviar" value="enviar">Enviar</button>
+                           </div>
+
+                       </form>
+                        </div>
+                       
                 </div>
             </div>
         </div>
