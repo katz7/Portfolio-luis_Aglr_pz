@@ -1,94 +1,36 @@
-/* ******* diseño de banner  ******** */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth; /*efecto de scroll*/
 }
 
-/* ****************************** estilo del body y animacion colores ******************************** */
-body {
-  animation: BgcolorChanging-6color 10s linear infinite alternate both;
+:root {
+  --clr-dorado: #d4c19c;
 }
 
-@keyframes BgcolorChanging-6color {
-  0% {
-    background: #4dff03;
-  }
-  20% {
-    background: #0804f7;
-  }
-  40% {
-    background: #ea2222;
-  }
-}
-
-/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-
-/* ///////////////////////////////////////////////////////// */
-
-.section-title {
-  /*distancia del banner de la parte baja*/
-  margin-bottom: -5px;
-}
-
-.section-title .overlay {
-  padding: 100px 0; /*tamaño de la mascara */
-  background: rgba(0, 0, 0, 0.7); /*color de la mascara*/
-}
-
-.section-title hr {
-  margin: 0 auto; /* se centra el <hr>*/
-  margin-bottom: 40px; /*margen de bajo del <hr>*/
-}
-
-hr {
-  height: 5px; /*ancho*/
-  width: 100px; /*largo*/
-  /* background: #4dff03; */
-  border: 0;
-  animation: Barra-6color 10s linear infinite alternate both;
-}
-
-/* ///////////////// efecto de color de barra  */
-@keyframes Barra-6color {
-  0% {
-    background: #4dff03;
-  }
-  20% {
-    background: #0804f7;
-  }
-  40% {
-    background: #ea2222;
-  }
-}
-
-/* ////////////// particulas ////////////////////// */
-#particles-js {
-  height: 400px;
+.container {
   width: 100%;
-  /* position: fixed; */
-  position: absolute;
-  z-index: 99;
-  /* para que quede dentro del banner va position: relative; dentro de la caja padre que #banner .section-title */
-}
-/* ///////////////////////////////////// */
-
-#banner {
-  padding: 0 0 8px 0; /*espacio bajo el barnner*/
 }
 
-#banner .section-title {
-  background: #444 url(img/binario2.jpg) center center no-repeat fixed;
+/* /////////////////// banner principal /////////////// */
+.banner-1 {
+  background: #444 url(img/cuidad3.png) center center no-repeat fixed;
   background-size: cover; /*especifica el tamaño de la imagen de fondo*/
   /* "cover" escala la imagen al mayor tamaño posible sin recortarla ni estirarla */
   position: relative;
+  /*distancia del banner de la parte baja*/
+  margin-bottom: -5px;
+}
+.capa-banner {
+  padding: 100px 0; /*tamaño de la mascara */
+  background: rgba(0, 0, 0, 0.4); /*color de la mascara*/
 }
 
-/* letras principales del banner  */
-
-h1#title-1 {
+.titulo-1 {
   text-align: center;
   color: rgba(250, 250, 250, 0.9);
   font-size: 20px;
@@ -99,7 +41,7 @@ h1#title-1 {
   font-weight: 100; /*grosor de las letras*/
 }
 
-#title-1 em {
+em {
   font-family: "EB Garamond", serif;
   font-size: 100px;
   text-transform: uppercase;
@@ -112,43 +54,51 @@ h1#title-1 {
   perspective: 1000;
 }
 
-#title-1 em::before,
-#title-1 em::after {
-  content: "☣";
+em::before,
+em::after {
+  content: "☣"; /*§ ☣ ☽ ☾ ☢ ♰*/
   display: inline-block;
-  opacity: 0.1;
+  opacity: 0.7;
   margin: 0 16px;
-  font-size: 7vw; /*40px § ☣ ☽ ☾ ☢ ♰*/
+  font-size: 7vw;
   display: inline-block; /*bloque en linea permite establecer una anchura y altura en el elemento */
   -webkit-animation: rotateIn 11s cubic-bezier(0, 0, 0.58, 1) infinite; /*tiempo de transicion de la animacion */
   animation: rotateIn 11s cubic-bezier(0, 0, 0.58, 1) infinite; /*tiempo de transicion de la animacion */
 }
 
 /* animacion de letra A del banner  */
-#title-1 em span {
+.titulo-1 em span {
   display: inline-block; /*bloque en linea permite establecer una anchura y altura en el elemento */
   -webkit-animation: lightSpeedInRight 4s cubic-bezier(0, 0, 0.58, 1) infinite; /*tiempo de transicion de la animacion lightSpeedInRight*/
   animation: lightSpeedInRight 4s cubic-bezier(0, 0, 0.58, 1) infinite; /*tiempo de transicion de la animacion */
-
   color: #fff;
 }
-
-#title-1 em span:hover {
+.titulo-1 em span:hover {
   -webkit-animation: hinge 2s cubic-bezier(0, 0, 0.58, 1) infinite; /*tiempo de transicion de la animacion lightSpeedInRight*/
   animation: hinge 2s cubic-bezier(0, 0, 0.58, 1) infinite; /*tiempo de transicion de la animacion */
 }
 
 /* tamaño de las letras cambian al ser resposivo */
-
-#title-1 em {
+em {
   font-size: 5vw; /*tamaño resposivo para letras */
   padding-top: 0;
 }
-h1#title-1 {
+/* h1.titulo-1 {
   font-size: 25px;
   margin-top: 5vh;
+} */
+
+hr {
+  /*barra*/
+  height: 5px; /*ancho*/
+  width: 100px; /*largo*/
+  /* background: #4dff03; */
+  border: 0;
+  background: red;
+  margin: 0 auto; /* se centra el <hr>*/
+  margin-bottom: 40px; /*margen de bajo del <hr>*/
 }
-/* +++++++++++++++++++++++++++++++ menu ++++++++++++++++++++ */
+/* /////////////////// menu ///////////////////////////// */
 .menu {
   background: black;
   height: 75px;
@@ -274,106 +224,165 @@ ul.show {
   }
 }
 
-/* ++++++++++++++++++++++++++ banner quien ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-#banner-0 .section-imag .overlay {
-  padding: 12px; /* tamaño del color */
-  background: rgba(0, 0, 0, 0.7);
-  height: 390px;
+@keyframes Barra-6color {
+  0% {
+    background: #4dff03;
+  }
+  20% {
+    background: #0804f7;
+  }
+  40% {
+    background: #ea2222;
+  }
 }
 
-#banner-0 {
-  padding: 3px 0 1px 0; /*espacio bajo el barnner*/
-}
+/* //////////////// quien soy  /////////////////7 */
 
-#banner-0 .section-imag {
-  background: #444 url(img/luna.jpg) center center no-repeat fixed;
-  background-size: cover;
-  padding: 0; /* tamaño del contenedor  */
-}
-
-.caja-Quien-soy {
-  border: solid 5px #d4c19c;
+.quien-soy {
+  width: 60%;
+  height: 20%;
+  max-width: 1000px;
+  margin: 20px auto;
+  position: relative;
+  background: #444 url(img/cuidad3.png) fixed;
+  background-size: cover; /*especifica el tamaño de la imagen de fondo*/
   display: flex;
+  border-radius: 12px;
   justify-content: center;
   align-items: center;
+  border: 5px solid var(--clr-dorado);
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.7);
+}
+
+.img-quien {
+  width: 100%;
+  height: 30%;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  border-radius: 12px;
+}
+
+.cuadro-text {
   width: 70%;
-  /* overflow: auto; */
-  margin: auto;
-}
-
-.caja-Quien1 {
+  position: absolute;
+  font-size: 1.5vw;
+  border: 4px solid var(--clr-dorado);
+  padding: 10px;
   color: #fff;
-}
-.caja-Quien2 img {
-  width: 200px;
-  height: 180px;
+  background: rgba(82, 82, 82, 0.315); /*color de la mascara*/
 }
 
-.caja-Quien1 p {
+.titulo-quien {
+  text-align: center;
+}
+
+@media (max-width: 690px) {
+  .quien-soy {
+    width: 98%;
+    height: auto;
+  }
+  .cuadro-text {
+    width: 95%;
+    height: auto;
+    font-size: 20px;
+  }
+}
+
+/* //////////////// benner estrellas ///////////////////// */
+.banner-estrellas {
+  display: flex;
+  justify-content: center;
+}
+
+.estrella {
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  background: #444 url(img/cuidad3.png) center center no-repeat fixed;
+  background-size: cover;
+  width: 13%;
+  margin: 10px;
+}
+
+.estrella div {
+  padding: 50px 50px; /* tamaño del color */
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* /////////////// banner proyectos ////////////////////// */
+
+.proyecto {
+  width: 99%;
+  height: auto;
+  margin: 20px auto;
+  background: #444 url(img/ciudad.jpg) center center fixed;
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.7);
+}
+
+.banner-proyecto {
+  background: #444 url(img/muronegro.jpg) center center fixed;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+.capa-proyecto {
+  padding: 100px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.tex-proyecto {
+  text-align: center;
+  font-size: 20px;
+  width: 40%;
+  height: auto;
+  color: #fff;
+  border: 3px solid var(--clr-dorado);
+  position: absolute;
+  bottom: 30%;
+  right: 30%;
   padding: 12px;
-  background: rgba(0, 0, 0, 0.5);
-  font-size: 15px;
-  font-family: "Roboto", sans-serif;
-  letter-spacing: 6px; /*espacio entre cada palabra*/
-  line-height: 20px; /*establece la altura de cada línea que forma el contenido de texto*/
-  font-style: normal; /*estilo de la fuente normal*/
-  font-weight: 100; /*grosor de las letras*/
+  background: rgba(53, 53, 53, 0.705);
 }
 
-@media screen and (max-width: 768px) {
-  .caja-Quien-soy {
-    flex-wrap: wrap;
-  }
-  .caja-Quien2 img {
-    display: none;
-  }
-}
+/* ++++++++++++++++++++++  ojos y gato +++++++++++++++++++++++++ */
 
-@media screen and (max-width: 362px) {
-  .caja-Quien1 p {
-    font-size: 13px;
-  }
-  .caja-Quien-soy {
-    width: 90%;
-  }
-}
-
-/* ************************* banner letras proyecto ***************************************************** */
-#banner-1 .section-imag .overlay {
-  padding: 0; /* tamaño del color */
-  background: rgba(0, 0, 0, 0.7);
-}
-
-#banner-1 {
-  padding: 0 0 0px 0; /*espacio bajo el barnner*/
-  margin-top: -35px; /*////*/
-}
-
-#banner-1 .section-imag {
-  background: #444 url(img/luna.jpg) center center no-repeat fixed;
+.caja-gato {
+  background: #444 url(img/binario2.jpg) center center fixed;
   background-size: cover;
-  padding: 0; /* tamaño del contenedor  */
 }
 
-/* *********************  banner gato  *************************************************************** */
-
-#banner-gato .section-gato .overlay {
+.banner-gato {
+  width: 100%;
+  background: #444 url(img/frores.jpg) center center no-repeat fixed;
+  background-size: cover;
+  clip-path: polygon(
+    0% 15%,
+    15% 15%,
+    15% 0%,
+    85% 0%,
+    85% 15%,
+    100% 15%,
+    100% 85%,
+    85% 85%,
+    85% 100%,
+    15% 100%,
+    15% 85%,
+    0% 85%
+  );
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.7);
+}
+.capa-gato {
   padding: 110px 0;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-#banner-gato .section-gato {
-  background: #444 url(img/luna.jpg) center center no-repeat fixed;
-  background-size: cover;
-}
-
-/* ++++++++++++++++++++++  ojos +++++++++++++++++++++++++ */
-
-.container-2 {
-  background: rgba(0, 0, 0, 0.7);
-  /* background: rgb(63, 62, 62); */
-  height: 300px; /*largo del contenedor*/
-  margin-bottom: -13px; /*espacio bajo el baner*/
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .box-1 {
@@ -381,6 +390,7 @@ ul.show {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center; /*centra el contenido de la caja*/
+  align-items: center;
 }
 
 /* ojos */
@@ -392,6 +402,9 @@ ul.show {
   top: 15px;
   left: -1px;
   background-color: yellow; /*color de ojos*/
+  width: 65px;
+  height: 65px;
+  top: 25px; /*bajamos un poco para que encaje en la mascara gato*/
 }
 
 .eye-inside {
@@ -409,176 +422,28 @@ ul.show {
   transform: scaleX(-1);
 }
 
-/* +++++++++++++++++++++ imagen del gatito ++++++++++++++++++++++++++++++++++*/
-.gato {
-  top: 1035px;
-  width: 220px;
-  height: 220px;
-  z-index: 3; /*para que la imagen del gato este ensima de los ojos */
-  overflow: hidden;
+.img-gato {
+  width: 226px;
+  height: 250px;
   position: absolute;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center; /*centra el contenido de la caja*/
 }
 
-@media screen and (max-width: 1440px) {
-  .gato {
-    top: 1035px;
-  }
-}
+/* /////////////////////// contenido de proyectos tarjetas //////////////// */
 
-@media screen and (max-width: 1366px) {
-  .gato {
-    top: 1025px;
-  }
-}
-
-@media screen and (max-width: 485px) {
-  .gato {
-    top: 1010px;
-  }
-}
-
-@media screen and (max-width: 380px) {
-  .gato {
-    top: 1150px;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .gato {
-    top: 1150px;
-  }
-}
-
-/* 1366 x 768 */
-
-/* +++++++++++++++++ ventana modal ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-
-.container-all {
-  position: fixed;
-  bottom: 0;
-  z-index: 1200; /*para que el modal sea el unico */
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  padding: 50px;
-  visibility: hidden;
-  opacity: 0;
-  transition: all 600ms;
-}
-
-.container-all:target {
-  background: rgba(0, 0, 0, 0.8);
-  visibility: visible;
-  opacity: 1;
-}
-
-.container-all:target .popup {
-  top: 50%;
-  left: 50%;
-  transform: rotate(0deg) translate(-50%, -50%);
-  visibility: visible;
-}
-
-.popup {
-  width: 100%;
-  max-width: 800px;
-  height: 500px;
-  position: relative;
-  display: flex;
-  background: white;
-  visibility: hidden;
-  top: -80%;
-  left: -80%;
-  transform: rotate(90deg) translate(-150%, 230%);
-  transition: all 600ms;
-}
-
-.imgpu {
-  width: 40%;
-  background-image: url(./img/exa.png);
-  background-size: cover; /*para que se adapte la imagen*/
-  background-position: center;
-}
-
-.container-text {
-  width: 60%;
-  padding: 50px;
-  overflow-y: auto; /*para que aparesca la barra del escrol*/
-}
-
-.container-text .letra1 {
-  font-size: 40px;
-}
-
-.container-text .letra2 {
-  margin-top: 20px;
-  font-size: 16px;
-  text-align: justify;
-}
-
-.btn-close-popup {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  right: -35px;
-  top: -35px;
-  padding: 30px;
-  background: black;
-  color: white;
-  border-radius: 50%;
-  line-height: 40px;
-  text-decoration: none;
-}
-
-@media screen and (max-width: 900px) {
-  .container-all {
-    width: 85%;
-    height: 90%;
-  }
-  .popup {
-    flex-direction: column;
-    height: 100%;
-    max-height: 800px;
-  }
-
-  .imgpu {
-    width: 85%;
-    height: 40%;
-  }
-  .container-text {
-    margin-left: 12px;
-    width: 85%;
-    height: 52%;
-    padding: 18px;
-  }
-  .container-text h1 {
-    font-size: 20px;
-  }
-  .container-text p {
-    font-size: 12px;
-  }
-}
-
-/* targetas  */
-
-.container {
-  background: #444 url(img/muro.jpg) center center fixed;
-  /* background: #111; */
-  /* background: rgb(43, 42, 42); */
-
+.caja-proyectos {
+  background: #444 url(img/ciudad.jpg) center center fixed;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 45px 0;
   flex-wrap: wrap;
-  margin-bottom: 6px;
-  margin-top: -9px;
+  width: 95%;
+  height: auto;
+  margin: 10px 20px 40px 20px;
+  border: 5px solid rgb(202, 2, 2);
+  border-radius: 12px;
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.7);
 }
 
 .container .box {
@@ -651,7 +516,6 @@ ul.show {
   left: 0;
   width: 50%;
   height: 100%;
-  /* background: rgba(255,255,255,0.1);  */
   background: #444 url(img/luz.png) center center fixed;
   background-position: 50% 50%;
   pointer-events: none;
@@ -666,9 +530,7 @@ ul.show {
   height: 100%;
   background: rgb(10, 10, 10) url(img/veterinaria1.png) center center no-repeat
     fixed;
-  /* background-image: url(./img/veterinaria1.png); */
   background-position: 50% 50%;
-  /* background: rgba(255,255,255,0.1); */
   pointer-events: none;
 }
 
@@ -680,9 +542,7 @@ ul.show {
   width: 50%;
   height: 100%;
   background: #444 url(img/exa.png) center center fixed;
-  /* background-image: url(./img/veterinaria1.png); */
   background-position: 50% 50%;
-  /* background: rgba(255,255,255,0.1); */
   pointer-events: none;
 }
 
@@ -694,9 +554,7 @@ ul.show {
   width: 50%;
   height: 100%;
   background: #444 url(img/plom.png) center center fixed;
-  /* background-image: url(./img/veterinaria1.png); */
   background-position: 50% 50%;
-  /* background: rgba(255,255,255,0.1); */
   pointer-events: none;
 }
 
@@ -746,7 +604,7 @@ ul.show {
   top: 100%;
 }
 
-/* ////////////////////////// boton /////////////////////////////////// */
+/* /////// boton caja proyecto  */
 .boton_caja:before {
   content: "";
   display: block;
@@ -764,6 +622,116 @@ ul.show {
   width: 100%;
 }
 
+/* +++++++++++++++++ ventana modal +++++++++++++++++++++++++++++ */
+
+.container-all {
+  position: fixed;
+  bottom: 0;
+  z-index: 1200; /*para que el modal sea el unico */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 50px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 600ms;
+}
+
+.container-all:target {
+  background: rgba(0, 0, 0, 0.8);
+  visibility: visible;
+  opacity: 1;
+}
+
+.container-all:target .popup {
+  top: 50%;
+  left: 50%;
+  transform: rotate(0deg) translate(-50%, -50%);
+  visibility: visible;
+}
+
+.popup {
+  width: 100%;
+  max-width: 900px;
+  height: 500px;
+  position: relative;
+  display: flex;
+  background: white;
+  visibility: hidden;
+  top: -80%;
+  left: -80%;
+  transform: rotate(90deg) translate(-150%, 230%);
+  transition: all 600ms;
+}
+
+.imgpu {
+  width: 40%;
+  background-image: url(./img/exa.png);
+  background-size: cover; /*para que se adapte la imagen*/
+  background-position: center;
+}
+
+.container-text {
+  width: 60%;
+  padding: 50px;
+  overflow-y: auto; /*para que aparesca la barra del escrol*/
+}
+
+.container-text .letra1 {
+  font-size: 40px;
+}
+
+.container-text .letra2 {
+  margin-top: 20px;
+  font-size: 16px;
+  text-align: justify;
+}
+
+.btn-close-popup {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  padding: 30px;
+  background: black;
+  color: white;
+  border-radius: 50%;
+  line-height: 3px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 900px) {
+  .container-all {
+    width: 95%;
+    height: 90%;
+    margin: 50px auto;
+  }
+  .popup {
+    flex-direction: column;
+    height: 100%;
+    max-height: 800px;
+  }
+
+  .imgpu {
+    width: 85%;
+    height: 40%;
+  }
+  .container-text {
+    margin-left: 12px;
+    width: 95%;
+    height: 52%;
+    padding: 18px;
+  }
+  .container-text h1 {
+    font-size: 20px;
+  }
+  .container-text p {
+    font-size: 12px;
+  }
+}
+
 /*---------- efecto de los cuadors ----------*/
 .container .span1:hover,
 .container .span2:hover,
@@ -775,7 +743,7 @@ ul.show {
 }
 
 /* ++++++++++++++ banner habilidades +++++++++++++++++++++*/
-.container-habilidades {
+.habilidades {
   background: linear-gradient(315deg, #0307ff, #ff00ff);
   margin-bottom: 7px;
 }
@@ -794,26 +762,45 @@ ul.show {
   font-weight: 100; /*grosor de las letras*/
 }
 
-/* +++++++++++++++++ footer ++++++++++++++++++++++ */
-
-#banner-footer .section-imag .overlay {
-  padding: 15px; /* tamaño del color */
-  background: rgba(0, 0, 0, 0.7);
-  height: 450px;
-  margin-top: -2px;
+/* ///////////////// footer //////////////////////// */
+.footer-banner {
+  background: #444 url(img/retro.gif) center center fixed;
+  background-size: cover;
+  width: 98%;
+  margin: 0 12px 12px 12px;
+  border-radius: 12px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
 }
-.caja-formulario {
+
+.capa-footer {
+  padding: 100px 0;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+}
+
+.text-contacto {
+  font-size: 2rem;
+  padding: 5px 0 20px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 10px;
+  font-style: oblique;
+}
+
+.formulario-caja {
   margin: 50px auto;
   width: 60%;
   min-height: 80px;
   margin: auto;
   padding: 15px 0 10px 10px;
-  border: solid 2px white;
+
   color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+  border: 3px solid #892cdc;
 }
 
-.caja-formulario input[type="text"],
-.caja-formulario input[type="email"] {
+.formulario-caja input[type="text"],
+.formulario-caja input[type="email"] {
   height: 25px;
   width: 48%;
   margin-bottom: 20px;
@@ -849,12 +836,6 @@ textarea {
   font-weight: 100; /*grosor de las letras*/
 }
 
-.btn-centrar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .boton-enviar:hover::before {
   top: 0px;
   border-radius: 0;
@@ -873,26 +854,21 @@ textarea {
   transition: all 0.5s;
 }
 
-#banner-footer .section-imag {
-  background: #444 url(img/retro.gif) center center no-repeat fixed;
-  background-size: cover;
-  padding: 0; /* tamaño del contenedor  */
-}
-
-@media screen and (max-width: 908px) {
-  #banner-footer .section-imag .overlay p {
+@media (max-width: 908px) {
+  .formulario-caja {
     width: 94%;
     height: 50%;
   }
 }
 
-@media screen and (max-width: 362px) {
-  #banner-footer .section-imag .overlay p {
-    /* font-size: 18px; */
-    width: 80%;
-    height: 190px;
-    padding: 10px;
-    margin: auto;
-    letter-spacing: 5px; /*espacio entre cada palabra*/
-  }
+/* /////////////////// banner final ////////////////// */
+.banner-final {
+  background: #444 url(img/ciudad.jpg) center center no-repeat fixed;
+  background-size: cover;
 }
+
+.final-capa {
+  padding: 50px 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+/* ////////////////////////////////////////// */
