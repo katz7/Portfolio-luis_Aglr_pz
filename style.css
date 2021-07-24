@@ -353,6 +353,10 @@ ul.show {
   background: rgba(53, 53, 53, 0.705);
 }
 
+.tex-proyecto:hover {
+  -webkit-animation: heartBeat 1s cubic-bezier(0, 0, 0.58, 1) infinite;
+  animation: heartBeat 1s cubic-bezier(0, 0, 0.58, 1) infinite;
+}
 /* ++++++++++++++++++++++  ojos y gato +++++++++++++++++++++++++ */
 
 .caja-gato {
@@ -391,6 +395,11 @@ ul.show {
   flex-wrap: wrap;
   justify-content: center; /*centra el contenido de la caja*/
   align-items: center;
+}
+
+.img-gato:hover {
+  -webkit-animation: shakeX 1s cubic-bezier(0, 0, 0.58, 1) infinite;
+  animation: shakeX 1s cubic-bezier(0, 0, 0.58, 1) infinite;
 }
 
 /* ojos */
